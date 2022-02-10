@@ -1,0 +1,23 @@
+.art-tree-invisible {
+    display: none;
+}
+
+.art-tree ul,
+.art-tree li {
+  margin-top: 0;
+  margin-bottom: 0;
+  list-style-type: none;
+}
+
+.art-tree .mat-nested-tree-node div[role=group] {
+  padding-left: 40px;
+}
+
+.art-tree div[role=group] > .mat-tree-node {
+  padding-left: 40px;
+}
+
+.art-tree{
+    margin: 20px;
+}
+

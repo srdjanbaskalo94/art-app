@@ -1,0 +1,23 @@
+<div>
+    <form [formGroup]="editForm" (ngSubmit)="onSave()">
+        <mat-form-field class="title">
+            <mat-label>Title</mat-label>
+            <input type="text" matInput formControlName="title" placeholder="ex. English Vase">
+        </mat-form-field>
+        <mat-form-field class="imageUrl">
+            <mat-label>Image URL</mat-label>
+            <input type="text" matInput formControlName="url"
+                placeholder="https://images.metmuseum.org/CRDImages/ad/mobile-large/DP-14161-261.jpg">
+        </mat-form-field>
+        <mat-form-field class="description">
+            <mat-label>Description</mat-label>
+            <textarea cdkTextareaAutosize matInput formControlName="description"
+                placeholder="Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet consectetur adipisicing."></textarea>
+        </mat-form-field>
+
+        <div >
+            <button mat-flat-button color="accent" type="submit">Save</button>
+            <button type="button" mat-button color="primary" (click)="onPreview()">Preview</button>
+        </div>
+    </form>
+</div>

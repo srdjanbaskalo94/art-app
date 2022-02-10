@@ -1,0 +1,18 @@
+<div class="container">
+    <div class="image">
+        <img height="400px" [src]="artPiece!.url" alt="Could not load image">
+    </div>
+    <mat-divider></mat-divider>
+    <div>
+        <div class="title">
+            <h2>{{artPiece!.name}}</h2>
+            <div>
+                <button mat-flat-button [@popUpState]="editBtnState"
+                (click)="onEdit()" color="primary">Edit</button>
+            </div>
+        </div>
+        <div class="description">
+            <p>{{artPiece!.description}}</p>
+        </div>
+    </div>
+</div>

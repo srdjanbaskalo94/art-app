@@ -1,0 +1,16 @@
+<div>
+    <form [formGroup]="filterForm">
+        <mat-radio-group formControlName="artType" >
+            <mat-radio-button value="all">All</mat-radio-button>
+            <mat-radio-button value="painting">Painting</mat-radio-button>
+            <mat-radio-button value="potery">Potteries</mat-radio-button>
+        </mat-radio-group>
+
+        <mat-form-field >
+            <input type="text" matInput formControlName="query" placeholder="search">
+        </mat-form-field>
+    </form>
+
+    <app-art-nav-tree [collection]="(collection$ | async)!"></app-art-nav-tree>
+</div>
+

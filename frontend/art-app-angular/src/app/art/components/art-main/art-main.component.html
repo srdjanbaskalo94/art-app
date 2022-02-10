@@ -1,0 +1,19 @@
+<div class="display-setup">
+    <mat-sidenav-container >
+        <mat-sidenav #sideNav class="display-setup" [opened]="true" mode="side" >
+            <app-art-nav class="display-setup side-nav" *ngIf="!show"  ></app-art-nav>
+            <app-art-edit [artPiece]="(artPiece$ | async)!" class="display-setup side-edit" 
+            *ngIf="show" >
+            </app-art-edit>
+        </mat-sidenav>
+
+        <mat-sidenav-content>
+            <app-art-detail [artPiece]="(artPiece$ | async)!"  [isEditing]="show" class="display-setup">
+            </app-art-detail>
+        </mat-sidenav-content>
+    </mat-sidenav-container>
+</div>
+
+
+
+
